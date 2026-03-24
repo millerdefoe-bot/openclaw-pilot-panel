@@ -27,6 +27,7 @@ const App = () => (
               <main className="flex-1">
                 <Routes>
                   <Route path="/" element={<Index />} />
+                  <Route path="/agents/:agentId" element={<AgentChat />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
