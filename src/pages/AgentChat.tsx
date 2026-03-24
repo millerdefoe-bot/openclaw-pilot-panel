@@ -30,12 +30,8 @@ const agentConfig = {
 
 const AgentChat = () => {
   const { agentId } = useParams<{ agentId: string }>();
-
-  if (!agentId || !(agentId in agentConfig)) {
-    return <Navigate to="/agents/security" replace />;
-  }
-
-  const agent = agentConfig[agentId as keyof typeof agentConfig];
+  const validAgent = agentId && agentId in agentConfig;
+  const agent = validAgent ? agentConfig[agentId as keyof typeof agentConfig] : agentConfig.security;
   const AgentIcon = agent.icon;
 
   const [messages, setMessages] = useState<Message[]>([
@@ -50,6 +46,10 @@ const AgentChat = () => {
   const [attachedFiles, setAttachedFiles] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  if (!validAgent) {
+    return <Navigate to="/agents/security" replace />;
+  }
 
   const handleSend = () => {
     if (!input.trim() && attachedFiles.length === 0) return;
