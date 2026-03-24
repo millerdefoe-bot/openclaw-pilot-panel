@@ -21,6 +21,11 @@ const mainItems = [
   { title: "Messages", url: "/messages", icon: MessageSquare },
 ];
 
+const agentItems = [
+  { title: "Security", url: "/agents/security", icon: Shield },
+  { title: "Teacher", url: "/agents/teacher", icon: GraduationCap },
+];
+
 const systemItems = [
   { title: "Automations", url: "/automations", icon: Zap },
   { title: "Settings", url: "/settings", icon: Settings },
