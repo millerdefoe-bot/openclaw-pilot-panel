@@ -1,4 +1,4 @@
-import { LayoutDashboard, Activity, Settings, Bot, CalendarDays, Users, Brain, GraduationCap } from "lucide-react";
+import { LayoutDashboard, Activity, Settings, Bot, CalendarDays, Users, Brain, GraduationCap, MessageSquare } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -21,6 +21,7 @@ const mainItems = [
   { title: "Team", url: "/team", icon: Users },
   { title: "Memory", url: "/memory", icon: Brain },
   { title: "Learning", url: "/learning", icon: GraduationCap },
+  { title: "Chat", url: "/chat", icon: MessageSquare },
 ];
 
 const systemItems = [
