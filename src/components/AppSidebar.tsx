@@ -1,4 +1,4 @@
-import { LayoutDashboard, Activity, Terminal, Settings, Bot, Zap, MessageSquare, Shield, GraduationCap, CalendarDays } from "lucide-react";
+import { LayoutDashboard, Activity, Terminal, Settings, Bot, Zap, MessageSquare, CalendarDays, Users } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -18,13 +18,9 @@ const mainItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Activity", url: "/activity", icon: Activity },
   { title: "Schedule", url: "/schedule", icon: CalendarDays },
+  { title: "Team", url: "/team", icon: Users },
   { title: "Commands", url: "/commands", icon: Terminal },
   { title: "Messages", url: "/messages", icon: MessageSquare },
-];
-
-const agentItems = [
-  { title: "Security", url: "/agents/security", icon: Shield },
-  { title: "Teacher", url: "/agents/teacher", icon: GraduationCap },
 ];
 
 const systemItems = [
@@ -80,30 +76,6 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarGroup>
-          <SidebarGroupLabel className="text-muted-foreground/60 text-[10px] uppercase tracking-widest">
-            {!collapsed && "Agents"}
-          </SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {agentItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <NavLink
-                      to={item.url}
-                      end
-                      className="transition-all duration-200 hover:bg-primary/10 rounded-md"
-                      activeClassName="bg-primary/15 text-primary font-medium border-glow"
-                    >
-                      <item.icon className={`mr-2 h-4 w-4 ${isActive(item.url) ? 'text-primary' : ''}`} />
-                      {!collapsed && <span>{item.title}</span>}
-                    </NavLink>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-muted-foreground/60 text-[10px] uppercase tracking-widest">
