@@ -1,4 +1,4 @@
-import { LayoutDashboard, Activity, Settings, Bot, CalendarDays, Users } from "lucide-react";
+import { LayoutDashboard, Activity, Settings, Bot, CalendarDays, Users, Brain } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -19,6 +19,7 @@ const mainItems = [
   { title: "Activity", url: "/activity", icon: Activity },
   { title: "Schedule", url: "/schedule", icon: CalendarDays },
   { title: "Team", url: "/team", icon: Users },
+  { title: "Memory", url: "/memory", icon: Brain },
 ];
 
 const systemItems = [
