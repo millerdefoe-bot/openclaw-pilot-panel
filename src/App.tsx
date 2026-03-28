@@ -10,6 +10,7 @@ import Activity from "./pages/Activity.tsx";
 import Schedule from "./pages/Schedule.tsx";
 import Team from "./pages/Team.tsx";
 import Memory from "./pages/Memory.tsx";
+import Learning from "./pages/Learning.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
                   <Route path="/schedule" element={<Schedule />} />
                   <Route path="/team" element={<Team />} />
                   <Route path="/memory" element={<Memory />} />
+                  <Route path="/learning" element={<Learning />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
