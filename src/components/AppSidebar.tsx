@@ -76,30 +76,6 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarGroup>
-          <SidebarGroupLabel className="text-muted-foreground/60 text-[10px] uppercase tracking-widest">
-            {!collapsed && "Agents"}
-          </SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {agentItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <NavLink
-                      to={item.url}
-                      end
-                      className="transition-all duration-200 hover:bg-primary/10 rounded-md"
-                      activeClassName="bg-primary/15 text-primary font-medium border-glow"
-                    >
-                      <item.icon className={`mr-2 h-4 w-4 ${isActive(item.url) ? 'text-primary' : ''}`} />
-                      {!collapsed && <span>{item.title}</span>}
-                    </NavLink>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-muted-foreground/60 text-[10px] uppercase tracking-widest">
