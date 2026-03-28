@@ -12,6 +12,7 @@ import Team from "./pages/Team.tsx";
 import Memory from "./pages/Memory.tsx";
 import Learning from "./pages/Learning.tsx";
 import Settings from "./pages/Settings.tsx";
+import Chat from "./pages/Chat.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
                   <Route path="/team" element={<Team />} />
                   <Route path="/memory" element={<Memory />} />
                   <Route path="/learning" element={<Learning />} />
+                  <Route path="/chat" element={<Chat />} />
                   <Route path="/settings" element={<Settings />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
