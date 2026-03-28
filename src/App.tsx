@@ -7,6 +7,7 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import Index from "./pages/Index.tsx";
 import Activity from "./pages/Activity.tsx";
+import Schedule from "./pages/Schedule.tsx";
 import AgentChat from "./pages/AgentChat.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -29,6 +30,7 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/activity" element={<Activity />} />
+                  <Route path="/schedule" element={<Schedule />} />
                   <Route path="/agents/:agentId" element={<AgentChat />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>

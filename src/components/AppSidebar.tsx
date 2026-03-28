@@ -1,4 +1,4 @@
-import { LayoutDashboard, Activity, Terminal, Settings, Bot, Zap, MessageSquare, Shield, GraduationCap } from "lucide-react";
+import { LayoutDashboard, Activity, Terminal, Settings, Bot, Zap, MessageSquare, Shield, GraduationCap, CalendarDays } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -17,6 +17,7 @@ import {
 const mainItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Activity", url: "/activity", icon: Activity },
+  { title: "Schedule", url: "/schedule", icon: CalendarDays },
   { title: "Commands", url: "/commands", icon: Terminal },
   { title: "Messages", url: "/messages", icon: MessageSquare },
 ];
